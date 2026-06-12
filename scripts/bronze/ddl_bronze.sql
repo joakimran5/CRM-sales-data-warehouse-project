@@ -5,7 +5,7 @@ CREATE TABLE bronze.acc_info(
 	acc_nm NVARCHAR(50),
 	acc_sect NVARCHAR(50),
 	acc_yr_est SMALLINT,
-	acc_rev DECIMAL(7,2),
+	acc_rev decimal(10,2),
 	acc_empys INT,
 	acc_loc NVARCHAR(50),
 	acc_subs_of NVARCHAR(50)
@@ -21,7 +21,7 @@ CREATE TABLE bronze.sales_details(
 	deal_stage NVARCHAR(50),
 	engage_date DATE,
 	close_date DATE,
-	close_value DATE
+	close_value DECIMAL(10,2)
 );
 
 IF OBJECT_ID('bronze.prd_info', 'U') IS NOT NULL
@@ -29,7 +29,7 @@ IF OBJECT_ID('bronze.prd_info', 'U') IS NOT NULL
 CREATE TABLE bronze.prd_info(
 	prd_nm NVARCHAR(50),
 	prd_srs NVARCHAR(50),
-	prd_sls_prc  DECIMAL(7,2)
+	prd_sls_prc  decimal(10,2)
 );
 
 IF OBJECT_ID('bronze.agt_info', 'U') IS NOT NULL
